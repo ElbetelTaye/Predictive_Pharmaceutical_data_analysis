@@ -58,6 +58,7 @@ def clean_data(df):
     df_cleaned = df[(z_scores < 3)]
     
     logging.info("Outliers handled for Sales using z-scores")
+    
     return df_cleaned
 
 def clean_test_data(df):
