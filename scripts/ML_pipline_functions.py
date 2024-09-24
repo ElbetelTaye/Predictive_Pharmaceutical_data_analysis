@@ -61,6 +61,8 @@ def create_pipeline(input_cols, num_cols, cat_cols):
     
     return Pipeline(steps=[('preprocessor', preprocessor)])
 
+
+# Defining loss function (root mean square error)
 def rmspe(y_true, y_pred):
     percentage_error = (y_true - y_pred) / y_true
     percentage_error[y_true == 0] = 0
